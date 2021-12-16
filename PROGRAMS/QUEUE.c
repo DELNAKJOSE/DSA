@@ -1,13 +1,16 @@
-//____________________AUTHOR: DELNA K JOSE_______________
-
+//____________________AUTHOR: DELNA K JOSE____________________//
+//______________________DATE:16/12/2021______________________//
+//____________AIM:IMPLEMENTATION OF QUEUE OPERATION__________//
 #include<stdio.h>
 #include<stdlib.h>
-#define n 10
+
 int main()
 {
-    int queue[n],cho=1,front=0,rear=0,i,j=1,x=n;
-    printf("QUEUE");
-    printf("\n1.INSERTION\n2.DELETION\n3.DISPLAY \n4.EXIT");
+    int n, queue[n],cho=1,front=0,rear=0,i,j=1,x=n;
+    printf("\nENTER THE SIZE OF THE ARRAY: ");
+    scanf("%d",&n);
+    printf("\n\nQUEUE");
+    printf("\n\n1.INSERTION\n2.DELETION\n3.DISPLAY \n4.EXIT");
     while(cho)
     {
         printf("\n\nEnter Your Choice:");
@@ -34,6 +37,27 @@ int main()
                 x++;
             }
             break;
+        case 3:
+            printf("\nELEMENTS ARE:\n");
+            if(front==rear)
+                printf("\n Queue is EMPTY");
+            else
+            {
+                for(i=front; i<rear; i++)
+                {
+                    printf("%d",queue[i]);
+                    printf("\n");
+                }
+                break;
+            case 4:
+                exit(0);
+            default:
+                printf("Invalid Choice");
+            }
+        }
+    }
+    return 0;
+}
         case 3:
             printf("\nELEMENTS ARE:\n");
             if(front==rear)
